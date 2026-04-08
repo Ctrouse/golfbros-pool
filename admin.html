@@ -350,7 +350,7 @@ body{font-family:var(--sans);background:var(--cream);color:var(--td);min-height:
             <div class="card-title">2026 Masters Field</div>
           </div>
           <div style="display:flex;align-items:center;gap:10px">
-            <span style="font-size:11px;color:var(--tmuted)" id="odds-updated">Odds: DraftKings Apr 5, 2026</span>
+            <span style="font-size:11px;color:var(--tmuted)" id="odds-updated">Odds: DraftKings Apr 7, 2026</span>
             <button class="btn btn-o btn-sm" id="refresh-odds-btn" onclick="forceOddsSync()">⟳ Sync Odds to Rosters</button>
           </div>
         </div>
@@ -492,20 +492,20 @@ function setSyncStatus(status, msg) {
 
 // ─── FIELD DATA ────────────────────────────────────────
 const FIELD=[
-  // ── Updated DraftKings odds April 5, 2026 ──
-  {name:"Scottie Scheffler",odds:410,group:"A"},
-  {name:"Jon Rahm",odds:850,group:"A"},
-  {name:"Rory McIlroy",odds:1025,group:"A"},
-  {name:"Bryson DeChambeau",odds:1100,group:"A"},
-  {name:"Ludvig Åberg",odds:1750,group:"A"},
+  // ── Updated DraftKings odds via ESPN, April 7, 2026 ──
+  {name:"Scottie Scheffler",odds:485,group:"A"},
+  {name:"Jon Rahm",odds:910,group:"A"},
+  {name:"Bryson DeChambeau",odds:1075,group:"A"},
+  {name:"Rory McIlroy",odds:1150,group:"A"},
+  {name:"Ludvig Åberg",odds:1650,group:"A"},
   {name:"Xander Schauffele",odds:1850,group:"A"},
-  {name:"Cameron Young",odds:2400,group:"A"},
+  {name:"Cameron Young",odds:2300,group:"A"},
   {name:"Tommy Fleetwood",odds:2500,group:"A"},
   {name:"Matt Fitzpatrick",odds:2600,group:"A"},
   {name:"Collin Morikawa",odds:3100,group:"B"},
   {name:"Justin Rose",odds:3600,group:"B"},
+  {name:"Brooks Koepka",odds:3700,group:"B"},
   {name:"Jordan Spieth",odds:3800,group:"B"},
-  {name:"Brooks Koepka",odds:3800,group:"B"},
   {name:"Hideki Matsuyama",odds:3900,group:"B"},
   {name:"Robert MacIntyre",odds:4000,group:"B"},
   {name:"Russell Henley",odds:4200,group:"B"},
@@ -513,11 +513,11 @@ const FIELD=[
   {name:"Patrick Reed",odds:4500,group:"B"},
   {name:"Viktor Hovland",odds:4600,group:"B"},
   {name:"Si Woo Kim",odds:4700,group:"B"},
+  {name:"Akshay Bhatia",odds:5700,group:"B"},
   {name:"Min Woo Lee",odds:5400,group:"B"},
   {name:"Justin Thomas",odds:5500,group:"B"},
   {name:"Patrick Cantlay",odds:5700,group:"B"},
   {name:"Adam Scott",odds:6200,group:"B"},
-  {name:"Akshay Bhatia",odds:6600,group:"B"},
   {name:"Sepp Straka",odds:6700,group:"B"},
   {name:"Jason Day",odds:6900,group:"B"},
   {name:"Jake Knapp",odds:6900,group:"B"},
@@ -1456,7 +1456,7 @@ async function forceOddsSync(){
     // Persist updated odds
     await persist();
     setTimeout(()=>{
-      document.getElementById('odds-updated').textContent = 'Odds: DraftKings Apr 5, 2026';
+      document.getElementById('odds-updated').textContent = 'Odds: DraftKings Apr 7, 2026';
     }, 3000);
   }
 }
